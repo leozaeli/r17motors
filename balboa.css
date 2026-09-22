@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Balboa";
+  src: url("fonts/Balboa-Display.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root { --display: "Balboa", Georgia, "Times New Roman", serif; }
+
+h1, h2, h3,
+.display-sample,
+.token-card strong,
+.vehicle-spec strong,
+.prompt-list > article > span {
+  font-family: var(--display);
+}

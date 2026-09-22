@@ -1,0 +1,3 @@
+.brand-mark{width:185px;height:auto;object-fit:contain}
+.footer-logo{width:150px;height:auto;object-fit:contain}
+@media(max-width:760px){.brand-mark{width:145px;height:auto}}
