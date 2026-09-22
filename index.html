@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="balboa.css" />
     <link rel="stylesheet" href="landing.css" />
     <link rel="stylesheet" href="landing-refinement.css" />
+    <link rel="stylesheet" href="whatsapp-refinement.css" />
+    <script src="landing.js" defer></script>
   </head>
   <body class="landing-body">
     <header class="site-header">
@@ -23,7 +25,7 @@
         <div class="hero-image"><img src="refs/cff62423fd25cce00c12632888921069.jpg" alt="Veículo de alta performance em cenário dourado" /></div>
         <div class="hero-shade"></div>
         <div class="hero-content">
-          <p class="eyebrow">R17 Motors · São Paulo</p>
+          <p class="eyebrow">R17 Motors · Salvador, BA</p>
           <h1>Carros que<br /><em>ficam na memória.</em></h1>
           <p>Curadoria, compra, venda e consignação de automóveis que merecem mais do que um anúncio.</p>
           <a class="landing-button" href="#acervo">Conheça o acervo <span>↘</span></a>
@@ -64,6 +66,22 @@
       </section>
     </main>
 
-    <footer><img src="logo/r17motors-transparent.png" alt="R17 Motors" /><div><p>R17 Motors</p><p>São Paulo · Brasil</p></div><p>© 2026 · Todos os direitos reservados</p></footer>
+    <footer><img src="logo/r17motors-transparent.png" alt="R17 Motors" /><div><p>R17 Motors</p><p>Salvador · BA, Brasil</p></div><a class="instagram-link" href="https://www.instagram.com/r17motors" target="_blank" rel="noreferrer">Instagram <span>@r17motors</span> ↗</a><p>© 2026 · Todos os direitos reservados</p></footer>
+
+    <button class="whatsapp-float" type="button" aria-haspopup="dialog" aria-controls="whatsapp-dialog"><span class="whatsapp-icon" aria-hidden="true">⌁</span><span>Atendimento</span></button>
+
+    <dialog class="whatsapp-dialog" id="whatsapp-dialog" aria-labelledby="whatsapp-title">
+      <form class="whatsapp-form" id="whatsapp-form">
+        <button class="dialog-close" type="button" aria-label="Fechar">×</button>
+        <p class="eyebrow">Atendimento privado</p>
+        <h2 id="whatsapp-title">Vamos iniciar<br />uma <em>conversa.</em></h2>
+        <p class="dialog-intro">Compartilhe alguns detalhes. Você será direcionado ao WhatsApp da R17 para revisar e enviar sua mensagem.</p>
+        <label>Nome<input name="name" autocomplete="name" required placeholder="Como podemos te chamar?" /></label>
+        <label>Telefone<input name="phone" type="tel" autocomplete="tel" required placeholder="(71) 99999-9999" /></label>
+        <fieldset><legend>Seu interesse</legend><label class="choice"><input type="radio" name="interest" value="Compra de veículo" required /> Compra de veículo</label><label class="choice"><input type="radio" name="interest" value="Venda ou consignação" required /> Venda ou consignação</label></fieldset>
+        <label>Mensagem<textarea name="message" rows="3" placeholder="Conte um pouco mais sobre o que você procura."></textarea></label>
+        <button class="dialog-submit" type="submit">Continuar no WhatsApp <span>↗</span></button>
+      </form>
+    </dialog>
   </body>
 </html>
