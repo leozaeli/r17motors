@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090909" />
+    <meta name="description" content="Veículos disponíveis na R17 Motors, em Salvador, BA." />
+    <title>Veículos — R17 Motors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="balboa.css" />
+    <link rel="stylesheet" href="landing.css" />
+    <link rel="stylesheet" href="landing-refinement.css" />
+    <link rel="stylesheet" href="whatsapp-refinement.css" />
+    <link rel="stylesheet" href="veiculos.css" />
+    <script src="landing.js" defer></script>
+  </head>
+  <body class="landing-body catalog-body">
+    <header class="catalog-header">
+      <a class="wordmark" href="/" aria-label="R17 Motors, início"><img src="logo/r17motors-transparent.png" alt="R17 Motors" /></a>
+      <nav aria-label="Navegação principal"><a class="active" href="/veiculos">Veículos</a><a href="/#servicos">Serviços</a><a href="/#sobre">A R17</a></nav>
+      <button class="catalog-contact" type="button" data-open-contact>Atendimento <span>↗</span></button>
+    </header>
+    <main>
+      <section class="catalog-hero">
+        <p class="eyebrow">R17 Motors · Salvador, BA</p>
+        <div><h1>Veículos<br /><em>selecionados.</em></h1><p>Uma seleção em constante movimento. Para informações completas e atendimento privado, fale com a R17.</p></div>
+        <p class="catalog-count">01 veículo disponível</p>
+      </section>
+      <section class="catalog-grid-section">
+        <div class="catalog-filter"><p>Acervo atual</p><span>Disponibilidade sob consulta</span></div>
+        <article class="catalog-card">
+          <div class="catalog-image"><img src="refs/bmw/WhatsApp%20Image%202026-09-13%20at%2020.48.24%20(4).jpeg" alt="BMW 330i preta vista de frente" /><span>Disponível</span></div>
+          <div class="catalog-info"><div><p>BMW</p><h2>330i</h2></div><p class="catalog-description">Sedã premium em configuração marcante, com interior claro e acabamento refinado.</p><div class="catalog-meta"><span>Detalhes sob consulta</span><button type="button" data-open-contact>Tenho interesse <b>↗</b></button></div></div>
+        </article>
+      </section>
+      <section class="catalog-request"><p class="eyebrow">Sourcing R17</p><h2>Seu próximo carro<br />pode não estar<br /><em>no catálogo.</em></h2><button type="button" data-open-contact>Falar com a curadoria <span>↗</span></button></section>
+    </main>
+    <footer><img src="logo/r17motors-transparent.png" alt="R17 Motors" /><div><p>R17 Motors</p><p>Salvador · BA, Brasil</p></div><a class="instagram-link" href="https://www.instagram.com/r17motors" target="_blank" rel="noreferrer">Instagram <span>@r17motors</span> ↗</a><p>© 2026 · Todos os direitos reservados</p></footer>
+    <button class="whatsapp-float" type="button" aria-haspopup="dialog" aria-controls="whatsapp-dialog"><span class="whatsapp-icon" aria-hidden="true">⌁</span><span>Atendimento</span></button>
+    <dialog class="whatsapp-dialog" id="whatsapp-dialog" aria-labelledby="whatsapp-title"><form class="whatsapp-form" id="whatsapp-form"><button class="dialog-close" type="button" aria-label="Fechar">×</button><p class="eyebrow">Atendimento privado</p><h2 id="whatsapp-title">Vamos iniciar<br />uma <em>conversa.</em></h2><p class="dialog-intro">Compartilhe alguns detalhes. Você será direcionado ao WhatsApp da R17 para revisar e enviar sua mensagem.</p><label>Nome<input name="name" autocomplete="name" required placeholder="Como podemos te chamar?" /></label><label>Telefone<input name="phone" type="tel" autocomplete="tel" required placeholder="(71) 99999-9999" /></label><fieldset><legend>Seu interesse</legend><label class="choice"><input type="radio" name="interest" value="Compra de veículo" required /> Compra de veículo</label><label class="choice"><input type="radio" name="interest" value="Venda ou consignação" required /> Venda ou consignação</label></fieldset><label>Mensagem<textarea name="message" rows="3" placeholder="Conte um pouco mais sobre o que você procura."></textarea></label><button class="dialog-submit" type="submit">Continuar no WhatsApp <span>↗</span></button></form></dialog>
+  </body>
+</html>

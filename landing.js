@@ -1,9 +1,9 @@
 const dialog = document.querySelector('#whatsapp-dialog');
-const openButton = document.querySelector('.whatsapp-float');
+const openButtons = document.querySelectorAll('.whatsapp-float, [data-open-contact]');
 const closeButton = document.querySelector('.dialog-close');
 const form = document.querySelector('#whatsapp-form');
 
-openButton?.addEventListener('click', () => dialog?.showModal());
+openButtons.forEach((button) => button.addEventListener('click', () => dialog?.showModal()));
 closeButton?.addEventListener('click', () => dialog?.close());
 dialog?.addEventListener('click', (event) => {
   if (event.target === dialog) dialog.close();
