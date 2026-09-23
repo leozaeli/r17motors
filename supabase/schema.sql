@@ -18,11 +18,11 @@ alter table public.vehicles enable row level security;
 alter table public.vehicle_images enable row level security;
 create policy "public reads published vehicles" on public.vehicles for select using (status = 'published');
 create policy "public reads images" on public.vehicle_images for select using (true);
-create policy "authenticated manage vehicles" on public.vehicles for all to authenticated using (true) with check (true);
-create policy "authenticated manage vehicle images" on public.vehicle_images for all to authenticated using (true) with check (true);
+create policy "admin manages vehicles" on public.vehicles for all to authenticated using ((auth.jwt() ->> 'email') = 'leosj.cc@gmail.com') with check ((auth.jwt() ->> 'email') = 'leosj.cc@gmail.com');
+create policy "admin manages vehicle images" on public.vehicle_images for all to authenticated using ((auth.jwt() ->> 'email') = 'leosj.cc@gmail.com') with check ((auth.jwt() ->> 'email') = 'leosj.cc@gmail.com');
 
 insert into storage.buckets (id, name, public) values ('vehicle-media', 'vehicle-media', true) on conflict (id) do update set public = true;
 create policy "public reads vehicle media" on storage.objects for select using (bucket_id = 'vehicle-media');
-create policy "authenticated uploads vehicle media" on storage.objects for insert to authenticated with check (bucket_id = 'vehicle-media');
-create policy "authenticated updates vehicle media" on storage.objects for update to authenticated using (bucket_id = 'vehicle-media') with check (bucket_id = 'vehicle-media');
-create policy "authenticated deletes vehicle media" on storage.objects for delete to authenticated using (bucket_id = 'vehicle-media');
+create policy "admin uploads vehicle media" on storage.objects for insert to authenticated with check (bucket_id = 'vehicle-media' and (auth.jwt() ->> 'email') = 'leosj.cc@gmail.com');
+create policy "admin updates vehicle media" on storage.objects for update to authenticated using (bucket_id = 'vehicle-media' and (auth.jwt() ->> 'email') = 'leosj.cc@gmail.com') with check (bucket_id = 'vehicle-media' and (auth.jwt() ->> 'email') = 'leosj.cc@gmail.com');
+create policy "admin deletes vehicle media" on storage.objects for delete to authenticated using (bucket_id = 'vehicle-media' and (auth.jwt() ->> 'email') = 'leosj.cc@gmail.com');
