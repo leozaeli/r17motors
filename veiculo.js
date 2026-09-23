@@ -1,4 +1,5 @@
-import { supabase } from '/supabase-config.js';
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+const supabase = createClient(window.R17_SUPABASE_URL, window.R17_SUPABASE_KEY);
 
 const page = document.querySelector('#vehicle-page');
 const safe = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#039;' })[char]);
