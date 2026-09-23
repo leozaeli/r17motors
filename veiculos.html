@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="catalog-refinement.css" />
     <link rel="stylesheet" href="empty-states.css" />
     <link rel="stylesheet" href="mobile-icons.css" />
+    <link rel="stylesheet" href="mobile-nav.css" />
     <script src="supabase-config.js"></script>
     <script src="landing.js" defer></script>
+    <script src="mobile-nav.js" defer></script>
     <script type="module" src="catalog.js"></script>
   </head>
   <body class="landing-body catalog-body">
@@ -24,7 +26,9 @@
       <a class="wordmark" href="/" aria-label="R17 Motors, início"><img src="logo/r17motors-transparent.png" alt="R17 Motors" /></a>
       <nav aria-label="Navegação principal"><a class="active" href="/veiculos">Veículos</a><a href="/#servicos">Serviços</a><a href="/#sobre">A R17</a></nav>
       <button class="catalog-contact" type="button" data-open-contact>Atendimento <span>↗</span></button>
+      <button class="mobile-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><i></i></button>
     </header>
+    <nav class="mobile-nav" aria-label="Menu mobile"><a href="/">Início</a><a href="/veiculos">Veículos</a><a href="/#servicos">Serviços</a><a href="/#sobre">A R17</a><a href="/#atendimento">Atendimento</a></nav>
     <main>
       <section class="catalog-hero">
         <p class="eyebrow">R17 Motors · Salvador, BA</p>

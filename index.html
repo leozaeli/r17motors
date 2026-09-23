@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="home-catalog.css" />
     <link rel="stylesheet" href="empty-states.css" />
     <link rel="stylesheet" href="mobile-icons.css" />
+    <link rel="stylesheet" href="mobile-nav.css" />
     <script src="supabase-config.js"></script>
     <script src="landing.js" defer></script>
+    <script src="mobile-nav.js" defer></script>
     <script type="module" src="home-catalog.js"></script>
   </head>
   <body class="landing-body">
@@ -23,7 +25,9 @@
       <a class="wordmark" href="#inicio" aria-label="R17 Motors, início"><img src="logo/r17motors-transparent.png" alt="" /></a>
         <nav aria-label="Navegação principal"><a href="/veiculos">Veículos</a><a href="#servicos">Serviços</a><a href="#sobre">A R17</a></nav>
       <a class="header-cta" href="#atendimento">Atendimento <span>↗</span></a>
+      <button class="mobile-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><i></i></button>
     </header>
+    <nav class="mobile-nav" aria-label="Menu mobile"><a href="/veiculos">Veículos</a><a href="#servicos">Serviços</a><a href="#sobre">A R17</a><a href="#atendimento">Atendimento</a></nav>
 
     <main id="inicio">
       <section class="landing-hero">
